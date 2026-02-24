@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: rgb(247 247 247);
+  --color-foreground: rgb(38 38 38);
+  --color-card: rgb(255 255 255);
+  --color-card-foreground: rgb(38 38 38);
+  --color-primary: rgb(59 130 246);
+  --color-primary-foreground: rgb(255 255 255);
+  --color-secondary: rgb(229 231 235);
+  --color-secondary-foreground: rgb(38 38 38);
+  --color-muted: rgb(243 244 246);
+  --color-muted-foreground: rgb(115 115 115);
+  --color-accent: rgb(237 242 247);
+  --color-accent-foreground: rgb(38 38 38);
+  --color-destructive: rgb(239 68 68);
+  --color-destructive-foreground: rgb(255 255 255);
+  --color-border: rgb(217 217 217);
+  --color-input: rgb(217 217 217);
+  --color-header-bg: rgb(55 65 81);
+  --color-header-foreground: rgb(255 255 255);
+  --color-success: rgb(34 197 94);
+  --color-success-foreground: rgb(255 255 255);
+  --color-warning: rgb(217 119 6);
+  --color-warning-foreground: rgb(255 255 255);
+}
+
+@layer base {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90 shadow-md;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .btn-success {
+    @apply bg-success text-success-foreground hover:opacity-90 shadow-md;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:opacity-80;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .btn-danger {
+    @apply bg-destructive text-destructive-foreground hover:opacity-90 shadow-md;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 border border-input rounded bg-card text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all;
+  }
+
+  .card {
+    @apply bg-card border border-border rounded-lg p-4 shadow-md;
+  }
+
+  .table-header {
+    @apply bg-muted text-muted-foreground border-b border-border;
+  }
+}
