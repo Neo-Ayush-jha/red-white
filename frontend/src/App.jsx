@@ -73,21 +73,21 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <div className="bg-gray-800  text-header-foreground px-6 lg:px-74 py-4 shadow-lg">
-        <h1 className="text-lg font-bold">
-           Student Management Application
+      <div className="bg-gray-800 text-header-foreground px-4 sm:px-6 lg:px-8 py-3 sm:py-4 shadow-lg">
+        <h1 className="text-base sm:text-lg lg:text-xl font-bold">
+          Student Management Application
         </h1>
       </div>
 
-      <div className="max-w-6xl mx-auto p-6">
-        <div className="mb-8">
-          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">Students List</h2>
+      <div className="max-w-6xl mx-auto p-3 sm:p-4 md:p-6">
+        <div className="mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 sm:mb-6 text-center">Students List</h2>
           
           <button
             onClick={() => setShowForm(!showForm)}
-            className="btn-primary gap-2"
+            className="btn-primary gap-2 w-full sm:w-auto"
           >
-            <span>+</span> Add Student
+            <span>+</span> <span className="hidden sm:inline">Add</span> Student
           </button>
         </div>
 
@@ -99,7 +99,7 @@ const App = () => {
 
         {loading ? (
           <div className="text-center py-8">
-            <p className="text-muted-foreground">Loading students...</p>
+            <p className="text-muted-foreground text-sm sm:text-base">Loading students...</p>
           </div>
         ) : (
           <>

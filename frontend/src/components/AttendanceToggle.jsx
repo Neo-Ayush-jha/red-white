@@ -1,4 +1,4 @@
-const AttendanceToggle = ({ status, onToggle }) => {
+const AttendanceToggle = ({ status, onToggle, isMobile }) => {
   const getStatusStyles = () => {
     switch (status) {
       case "Present":
@@ -24,12 +24,10 @@ const AttendanceToggle = ({ status, onToggle }) => {
   return (
     <button
       onClick={onToggle}
-      className={`px-3 py-1 rounded text-sm font-medium transition-all duration-200 flex items-center gap-1 ${
-        getStatusStyles()
-      }`}
+      className={`px-2 sm:px-3 py-1 rounded text-xs sm:text-sm font-medium transition-all duration-200 flex items-center justify-center gap-1 flex-1 sm:flex-none ${getStatusStyles()}`}
       title={`Click to change attendance status (Current: ${status || "Not marked"})`}
     >
-      <span>{getStatusIcon()}</span>
+      <span className={isMobile ? "hidden" : ""}>{getStatusIcon()}</span>
       <span>{status || "Mark"}</span>
     </button>
   );
