@@ -4,7 +4,7 @@ import AddStudentForm from "./components/AddStudentForm";
 import StudentList from "./components/StudentList";
 import AttendanceSummary from "./components/AttendanceSummary";
 
-const API_URL = "http://localhost:5000/api/students";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const App = () => {
   const [students, setStudents] = useState([]);
