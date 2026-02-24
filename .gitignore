@@ -39,7 +39,6 @@ __pycache__/
 venv/
 .env
 .env.*
-.env.example
 
 # Django
 db.sqlite3
