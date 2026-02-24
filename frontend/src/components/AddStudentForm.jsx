@@ -26,7 +26,7 @@ const AddStudentForm = ({ onAdd, onCancel }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="input"
-            placeholder="e.g., John Doe"
+            placeholder="e.g., ayush jha"
             required
           />
         </div>
@@ -37,7 +37,7 @@ const AddStudentForm = ({ onAdd, onCancel }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="input"
-            placeholder="e.g., john@example.com"
+            placeholder="e.g., ayush@gmail.com"
             required
           />
         </div>
